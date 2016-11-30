@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Agenda.Domain.Models.Eveniment>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <h4>Eveniment</h4>
+    <hr />
+    @foreach (var item in Model)
+    {
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model=>model.evt_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model=>item.evt_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.evt_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => item.evt_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pac_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => item.pac_id)
+        </dd>
+
+    </dl>
+    }
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.evt_id }) |*@
+    @Html.ActionLink("Back to List", "Index")
+</p>

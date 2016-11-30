@@ -57,5 +57,9 @@ namespace Agenda.Domain.Models
             _evenimentRepository.SaveChanges();
 
         }
+        public List<Eveniment> All()
+        {
+            return _evenimentRepository.All().ToList();
+        } 
     }
 }

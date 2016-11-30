@@ -12,5 +12,7 @@ namespace Agenda.Domain.Models
         void Insert(EvenimentDto model);
         void Update(EvenimentDto model);
         void Delete(int id);
+        List<Eveniment> All();        
+
     }
 }

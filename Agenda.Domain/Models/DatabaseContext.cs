@@ -7,11 +7,11 @@ namespace Agenda.Domain.Models
 
     public class DatabaseContext : DbContext, IDatabaseContext
     {
-        public DatabaseContext(IConnectionFactory connectionFactory)
-            : base(connectionFactory.ConnectionString)
+       
+        public DatabaseContext(IConnectionFactory connectionFactory) : base(connectionFactory.ConnectionString)
         {
         }
-
+     
         public virtual DbSet<Eveniment> Eveniments { get; set; }
         public virtual DbSet<Pacient> Pacients { get; set; }
 
