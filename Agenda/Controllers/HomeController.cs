@@ -37,5 +37,10 @@ namespace Agenda.Controllers
             }
             return View();
         }
+
+        public ActionResult AddPacient()
+        {
+            return View();
+        }
     }
 }

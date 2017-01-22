@@ -13,6 +13,7 @@ namespace Agenda.Domain.Models
         {
             this._context = context;
         }
+       
         public IQueryable<T> All()
         {
             return _context.Set<T>();

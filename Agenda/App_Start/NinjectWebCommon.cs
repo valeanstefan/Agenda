@@ -10,6 +10,7 @@ namespace Agenda.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using Domain.Models;
 
     public static class NinjectWebCommon 
     {
@@ -61,6 +62,11 @@ namespace Agenda.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<IEvenimentManager>().To<EvenimentManager>();
+            kernel.Bind<IPacientManager>().To<PacientManager>();
+            kernel.Bind(typeof(IRepository<>)).To(typeof(Repository<>));
+            kernel.Bind<IConnectionFactory>().To<ConnectionFactory>();
+            kernel.Bind<IDatabaseContext>().To<DatabaseContext>();
         }        
     }
 }

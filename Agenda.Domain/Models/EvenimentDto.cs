@@ -8,7 +8,6 @@ namespace Agenda.Domain.Models
 {
     public class EvenimentDto
     {
-        public int evt_id { get; set; }
 
         [Display(Name = "Event Name: ")]
         public string evt_name { get; set; }
